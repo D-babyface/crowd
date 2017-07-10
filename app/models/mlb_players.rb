@@ -1,0 +1,2 @@
+class MlbPlayers < ApplicationRecord
+end

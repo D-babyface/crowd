@@ -1,0 +1,47 @@
+<%= form_with(model: mlb_player, local: true) do |form| %>
+  <% if mlb_player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mlb_player.errors.count, "error") %> prohibited this mlb_player from being saved:</h2>
+
+      <ul>
+      <% mlb_player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :team %>
+    <%= form.text_field :team, id: :mlb_player_team %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :mlb_player_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.text_field :number, id: :mlb_player_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :average_or_era %>
+    <%= form.text_field :average_or_era, id: :mlb_player_average_or_era %>
+  </div>
+
+  <div class="field">
+    <%= form.label :years_played %>
+    <%= form.text_field :years_played, id: :mlb_player_years_played %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postition %>
+    <%= form.text_field :postition, id: :mlb_player_postition %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

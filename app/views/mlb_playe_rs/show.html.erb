@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @mlb_player.team %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mlb_player.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @mlb_player.number %>
+</p>
+
+<p>
+  <strong>Average or era:</strong>
+  <%= @mlb_player.average_or_era %>
+</p>
+
+<p>
+  <strong>Years played:</strong>
+  <%= @mlb_player.years_played %>
+</p>
+
+<p>
+  <strong>Postition:</strong>
+  <%= @mlb_player.postition %>
+</p>
+
+<%= link_to 'Edit', edit_mlb_player_path(@mlb_player) %> |
+<%= link_to 'Back', mlb_players_index_path %>

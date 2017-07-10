@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mlb Players</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Average or era</th>
+      <th>Years played</th>
+      <th>Postition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mlb_players.each do |mlb_player| %>
+      <tr>
+        <td><%= mlb_player.team %></td>
+        <td><%= mlb_player.name %></td>
+        <td><%= mlb_player.number %></td>
+        <td><%= mlb_player.average_or_era %></td>
+        <td><%= mlb_player.years_played %></td>
+        <td><%= mlb_player.postition %></td>
+        <td><%= link_to 'Show', mlb_player %></td>
+        <td><%= link_to 'Edit', edit_mlb_player_path(mlb_player) %></td>
+        <td><%= link_to 'Destroy', mlb_player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mlb Player', new_mlb_player_path %>
